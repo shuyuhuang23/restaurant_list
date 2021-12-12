@@ -1,6 +1,6 @@
 # 我的餐廳清單
 
-![Index page about Restaurant List](./public/image/snapshot_20211212.png)
+![Index page about Restaurant List](./public/image/snapshot_20211212_2.png)
 
 ## 介紹
 
@@ -11,6 +11,7 @@
 - 瀏覽所有餐廳
 - 瀏覽特定餐廳
 - 搜尋特定餐廳
+- 排序搜尋結果
 - 新增一家餐廳
 - 修改一家餐廳
 - 刪除一家餐廳
