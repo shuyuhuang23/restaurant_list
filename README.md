@@ -1,6 +1,6 @@
 # 我的餐廳清單
 
-![Index page about Restaurant List](./public/image/snapshot.png)
+![Index page about Restaurant List](./public/image/snapshot_20211212.png)
 
 ## 介紹
 
@@ -8,10 +8,12 @@
 
 ### 功能
 
-- 查看所有餐廳
-- 瀏覽餐廳的詳細資訊
-- 連結餐廳的地址到 Google 地圖
+- 瀏覽所有餐廳
+- 瀏覽特定餐廳
 - 搜尋特定餐廳
+- 新增一家餐廳
+- 修改一家餐廳
+- 刪除一家餐廳
 
 ## 開始使用
 
@@ -45,6 +47,7 @@
 
 - Node.js 10.15.0
 - Express 4.17.1
-- Express-Handlebars 5.3.3
+- Express-Handlebars 5.3.5
 - Bootstrap 4.3.1
 - Font-awesome 5.8.1
+- mongoose 6.1.1
