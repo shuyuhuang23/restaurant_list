@@ -45,8 +45,7 @@ router.get('/new', (req, res) => {
 router.get('/:restaurant_id', (req, res) => {
     const userId = req.user._id
     const restaurantId = req.params.restaurant_id
-    // Restaurant.findById(restaurantId)
-    Restaurant.findOne({ restaurantId, userId })
+    Restaurant.findOne({ _id: restaurantId, userId })
         .lean()
         .then(restaurant => res.render("show", { restaurant }))
         .catch(error => console.log(error))
@@ -77,7 +76,7 @@ router.get('/:restaurant_id/edit', (req, res) => {
     const userId = req.user._id
     const restaurantId = req.params.restaurant_id
     // Restaurant.findById(restaurantId)
-    Restaurant.findOne({ restaurantId, userId })
+    Restaurant.findOne({ _id: restaurantId, userId })
         .lean()
         .then(restaurant => res.render("edit", { restaurant }))
         .catch(error => console.log(error))
@@ -88,7 +87,7 @@ router.put('/:restaurant_id', (req, res) => {
     const userId = req.user._id
     const restaurantId = req.params.restaurant_id
     // Restaurant.findById(restaurantId)
-    Restaurant.findOne({ restaurantId, userId })
+    Restaurant.findOne({ _id: restaurantId, userId })
         .then(restaurant => {
             restaurant.name = req.body.name
             restaurant.name_en = req.body.name_en
@@ -110,7 +109,7 @@ router.delete('/:restaurant_id', (req, res) => {
     const userId = req.user._id
     const restaurantId = req.params.restaurant_id
     // return Restaurant.findById(restaurant_id)
-    return Restaurant.findOne({ restaurantId, userId })
+    return Restaurant.findOne({ _id: restaurantId, userId })
         .then(restaurant => restaurant.remove())
         .then(() => res.redirect('/'))
         .catch(error => console.log(error))
