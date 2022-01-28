@@ -1,5 +1,10 @@
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost/restaurant-list', {
+
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config()
+}
+
+mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })

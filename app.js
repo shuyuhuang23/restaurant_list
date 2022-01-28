@@ -10,11 +10,15 @@ const usePassport = require('./config/passport')
 const Restaurant = require('./models/restaurant')
 require('./config/mongoose')
 
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config()
+}
+
 const app = express()
-const port = 3000
+const port = process.env.PORT
 
 app.use(session({
-    secret: 'ThisIsMySecret',
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true
 }))
