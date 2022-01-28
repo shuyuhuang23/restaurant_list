@@ -1,6 +1,6 @@
 # 我的餐廳清單
 
-![Index page about Restaurant List](./public/image/snapshot_20211212_2.png)
+![Index page about Restaurant List](./public/image/snapshot_20220128.png)
 
 ## 介紹
 
@@ -8,6 +8,7 @@
 
 ### 功能
 
+- 使用者登入/登出
 - 瀏覽所有餐廳
 - 瀏覽特定餐廳
 - 搜尋特定餐廳
@@ -52,3 +53,4 @@
 - Bootstrap 4.3.1
 - Font-awesome 5.8.1
 - mongoose 6.1.1
+- passport 0.5.2
